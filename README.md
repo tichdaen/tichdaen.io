@@ -1,1 +1,3 @@
 # tichdaen.io
+
+update readme
