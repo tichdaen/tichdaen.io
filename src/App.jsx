@@ -16,7 +16,7 @@ function App() {
           </button>
         </p>
         <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
+          개종진 애자ㅋㅋ
         </p>
         <p>
           <a
