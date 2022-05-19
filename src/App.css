@@ -24,6 +24,62 @@
   color: white;
 }
 
+/* Header */
+.header .sidebar {
+  display: none;
+}
+
+.header .sidebar[aria-view="true"] {
+  display: block;
+  animation-duration : 0.3s;
+  animation-name : slide;
+}
+
+.header .sidebar[aria-view="false"] {
+  display: block;
+  animation-duration : 1s;
+  animation-name : slide-reverse;
+  margin-left: -300px;
+}
+
+@keyframes slide {
+  from { margin-left: -300px; }
+  to { margin-left : 0; }
+}
+
+@keyframes slide-reverse {
+  from { margin-left : 0; }
+  to { margin-left: -300px; }
+}
+
+#slider {
+  z-index: 2;
+  padding-top: 1rem;
+  position: absolute;
+  background-color: white;
+  height: 100%;
+}
+
+#slider div {
+  padding: 0 1rem;
+  list-style: none;
+}
+
+#slider div span {
+  padding-top: 2px;
+  display: block;
+}
+
+#slider .innerMenu {
+  overflow: hidden;
+  transition: all .3s ease-in-out;
+  height: 0;
+}
+
+#slider .innerMenu.focus {
+  height: 2.5rem;
+}
+
 .App-link {
   color: #61dafb;
 }

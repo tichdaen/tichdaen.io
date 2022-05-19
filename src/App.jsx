@@ -1,20 +1,23 @@
-import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
+import { useCallback, useState } from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+
+  const clickEvent = useCallback(() => {
+    setCount(count => {
+      console.log('count ', count);
+      return count + 1;
+    })
+  })
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 3)}>
-            count is: {count}
-          </button>
-        </p>
+        <button onClick={clickEvent}>Count! : {count}</button>
         <p>
           개종진 애자ㅋㅋ
         </p>
