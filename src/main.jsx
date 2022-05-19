@@ -7,7 +7,7 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='/tichdaen.io'>
       <Header />
       <Routes>
         <Route path='/' element={<App />} />
